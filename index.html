@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts! Board Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .fact {
+            margin: 20px 0;
+            font-size: 24px;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts! Board Game</h1>
+    <div class="fact">Click the button to see a fun fact!</div>
+    <button onclick="showFact()">Show Fun Fact</button>
+
+    <script>
+        const facts = [
+            "Honeybees can recognize human faces.",
+            "A goldfish's attention span lasts up to three months.",
+            "A blue whale's heart is the size of a small car.",
+            "Bananas are berries, but strawberries are not.",
+            "Octopuses have three hearts."
+        ];
+
+        function showFact() {
+            const fact = facts[Math.floor(Math.random() * facts.length)];
+            document.querySelector('.fact').innerText = fact;
+        }
+    </script>
+</body>
+</html>
